@@ -8,7 +8,7 @@ import WordList from "./components/WordList";
 // }}
 import List from "./words";
 import M from "materialize-css";
-
+let colors={dolce1:"red", dolce2:"blue", dolce3:"green" , dolce4: "purple", dolce5:"orange"}
 function reducer(state, action) {
   switch (action.type) {
     case "setCurrentList":
@@ -53,7 +53,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={"App " + colors[state.listName] }>
       <div className="row ">
         <div className="col left-align">
           <button
@@ -64,7 +64,7 @@ function App() {
           </button>
         </div>
         <div className="col">
-          <button className="btn transparent btn-flat" disabled>
+          <button data-target="slide-out" className=" sidenav-trigger btn transparent btn-flat white-text" >
             {addSpace(state.listName)}
           </button>
         </div>

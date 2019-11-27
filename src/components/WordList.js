@@ -11,7 +11,8 @@ const reducer = (state, action) => {
         : state;
     case "previous":
       return state.index > 0 ? { ...state, index: state.index - 1 } : state;
-
+	  case "resetIndex":
+		  return {...state , index: 0};
     default:
       return state;
   }
@@ -23,6 +24,9 @@ export default ({ words }) => {
     dispatch({ type: "setWords", payload: words });
   }, [words]);
 
+	useEffect(()=>{
+	dispatch({type: "resetIndex"})
+	},[words])
   const handleNext = () => {
     dispatch({ type: "next" });
   };
