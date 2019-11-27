@@ -5,7 +5,7 @@ export default ({word}) => {
     const speakWord = () => {
         let utter = new SpeechSynthesisUtterance()
         utter.text = word
-        utter.rate = .8
+        utter.rate = .5
         window.speechSynthesis.speak(utter)
     }
   return (
