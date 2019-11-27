@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+html{
+  background-color: #282c34;
+}
+.App-header {
+ 
+  min-height: 50vh;
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 25vh;
+  margin-bottom:auto;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.disabled{
+  color: rgba(165, 165, 165, 0.199)
+}
+
+
+.arrow{
+  transition: all .3s;
+}
+
+.active{
+  background-color: red;
+}
