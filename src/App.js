@@ -6,7 +6,7 @@ import WordList from "./components/WordList";
 //   "dolce1":[ "it", "she", "he", "we", "said", "the"],
 //   "dolce2":[ "little", "she", "was", "had", "they", "there"]
 // }}
-import List from "./words";
+import List from "./trickyWords";
 import M from "materialize-css";
 let colors={dolce1:"red", dolce2:"blue", dolce3:"green" , dolce4: "purple", dolce5:"orange"}
 function reducer(state, action) {
@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     dispatch({
       type: "setCurrentList",
-      payload: state.lists.dolce1,
+      payload: state.lists[0],
       listName: "dolce1"
     });
   }, []);
